@@ -1,0 +1,360 @@
+/*Main css file for "Zpěvník"*/
+/* color scheme:
+font family:
+text size:
+*/
+
+/* Common formating for all pages */
+h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 3px;
+}
+.hidden{
+    display: none;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#container {
+    min-height:100%;
+    position:relative;
+}
+#header {
+    background:#e1b382;
+    padding: 10px;
+}
+#body {
+    background-color: #e1b382;
+    padding:10px 0;
+    padding-bottom: 300px;	/* Height of the footer and a bit more to prevent white space */
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:150px;			/* Height of the footer */
+    background:#9d855b;
+    color: white;
+    text-align: center;    
+}
+div.overflow{
+    overflow: auto;
+}   
+
+/* header site messages dismissable by close_button */
+.modal_content{
+    background-color: red;
+  margin: auto;
+  padding: 5px;
+  border: solid 3px maroon;
+  width: 80%;
+  border-radius: 25px;
+}
+.modal_content p{
+    text-align: center;
+    font: 20px bold;
+}
+
+.close_button{
+    margin: 0;
+    padding: 0;
+    color: gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: top;
+    cursor: pointer;
+}
+.close_button:hover, .close_button:focus{
+    color: black;
+}
+
+/*Site navigation bar - horizontal - every site page*/
+
+/*hiding unnesecary login info*/
+#login_list p.hidden{
+    display: none;
+}
+#login_list>a.hidden{
+    display: none;
+}
+#login_list>form.hidden{
+    display: none;
+}
+/*main and left part*/
+#nav_list{
+    overflow: hidden;
+    background-color:#5d6a9d;
+}
+#nav_list a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#nav_list a:hover, #nav_list a:focus{
+    background-color: #8497e1;
+}
+/* right part of nav bar with login info*/
+#login_list p{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px  16px;
+    font-size: 17px;
+    margin: 0;
+}
+#login_list form label{
+    color: white;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+#login_list form label input{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 100px;
+    
+}
+#login_list form button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+/* Formating "Zpěvník" - songs.php*/
+
+/*live searchbar*/
+#searchbox{
+    width: 200px;
+    margin: auto;
+    float: left;
+}
+#searchbar{
+    height: 32px;
+    padding: 5px 10px;
+    border: 1px solid #CCCCCC;
+    font-size: 14px;
+    width: 200px;
+    box-sizing: border-box;
+}
+#hints{   
+    position: absolute;
+    width: 200px;
+}
+#hints a{
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-top: none;
+    cursor: pointer;
+    width: 178px;
+    display: block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+#hints a:hover, #hints a:hover{
+    background-color: #e1b382;
+}
+#hints p{
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-top: none;
+    width: 178px;
+    display: block;
+    background-color: white;
+    color: black;
+}
+/* song list */
+#add{
+    font-weight: bold;
+    font-size: 22px;
+}
+#songs_list{
+    column-count: 3;
+    column-gap: 20px;
+}
+#songs_list a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #826d4a;
+}
+#songslist_all ul{
+    padding: 0;
+    text-align: right;
+}
+/* Page content - index.php*/
+
+div.web_content{
+    margin: auto;
+    background-color:  #fff5e4;
+    width: 85%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+/* song_singular.php */
+div.song{
+    background-color: #fff5e4;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+/* users */
+#users_content form{
+    width: 315px;
+    margin: auto;
+}
+#users_content ul{
+    text-align: center; 
+    padding: 0;
+}
+#users_content table{
+    margin: auto;
+}
+#users_content table, tr, td{
+    border: solid medium black;
+}
+/* pagination */
+ul.pagination{
+    list-style-type: none;
+}
+ul.pagination li{
+    display: inline-block;
+}
+ul.pagination li a{
+    text-decoration: none;
+    color: black;
+    font: bold;
+}
+li.disabled{
+    pointer-events: none;
+    cursor: default;
+}
+li.disabled a{
+    color: grey;
+}
+/* registration form */
+#pswd_valid {
+    display:none;
+    background: rgb(175, 174, 174);
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#pswd_valid p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* div for password validation */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+#reg_form {
+    margin: auto;
+    text-align: center;
+}
+/* div form in registration */
+#reg_form form{
+    padding: 20px;
+    align-content: center;
+}
+#reg_form form label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    margin-right: 40%;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+/* printing, media, scaling */
+@media (max-width: 700px){
+    #nav_list{
+        text-align: center;
+    }
+    #nav_list a{
+        clear: both;
+    }
+    #login_form{
+        float:none;
+        clear: both;
+    }
+    #login_form p{
+        clear: both;
+    }
+    #login_form form label{
+        clear: both;
+    }
+    #login_form form button{
+        clear: both;
+    }
+    #songs_list{
+        column-count: 1;
+    }
+}
+@media print{
+    p {
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #login_list form label input{
+        border: solid 1px black;
+    }
+    #login_list form button{
+        border: solid 1px black;
+    }
+}
